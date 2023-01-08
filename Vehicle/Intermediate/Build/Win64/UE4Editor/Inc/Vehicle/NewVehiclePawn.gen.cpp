@@ -17,6 +17,8 @@ void EmptyLinkFunctionForGeneratedCodeNewVehiclePawn() {}
 	VEHICLE_API UClass* Z_Construct_UClass_ANewVehiclePawn();
 	PHYSXVEHICLES_API UClass* Z_Construct_UClass_AWheeledVehicle();
 	UPackage* Z_Construct_UPackage__Script_Vehicle();
+	ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 // End Cross Module References
 	void ANewVehiclePawn::StaticRegisterNativesANewVehiclePawn()
 	{
@@ -31,6 +33,15 @@ void EmptyLinkFunctionForGeneratedCodeNewVehiclePawn() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SpringArm_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_SpringArm;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Camera_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Camera;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
@@ -46,6 +57,31 @@ void EmptyLinkFunctionForGeneratedCodeNewVehiclePawn() {}
 		{ "ModuleRelativePath", "NewVehiclePawn.h" },
 	};
 #endif
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ANewVehiclePawn_Statics::NewProp_SpringArm_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "Camera" },
+		{ "Comment", "// ?????? ??\n" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "NewVehiclePawn.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ANewVehiclePawn_Statics::NewProp_SpringArm = { "SpringArm", nullptr, (EPropertyFlags)0x002008000009001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ANewVehiclePawn, SpringArm), Z_Construct_UClass_USpringArmComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ANewVehiclePawn_Statics::NewProp_SpringArm_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ANewVehiclePawn_Statics::NewProp_SpringArm_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ANewVehiclePawn_Statics::NewProp_Camera_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "Camera" },
+		{ "Comment", "// \xc4\xab?\xde\xb6?\n" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "NewVehiclePawn.h" },
+		{ "ToolTip", "\xc4\xab?\xde\xb6?" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ANewVehiclePawn_Statics::NewProp_Camera = { "Camera", nullptr, (EPropertyFlags)0x002008000009001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ANewVehiclePawn, Camera), Z_Construct_UClass_UCameraComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ANewVehiclePawn_Statics::NewProp_Camera_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ANewVehiclePawn_Statics::NewProp_Camera_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ANewVehiclePawn_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANewVehiclePawn_Statics::NewProp_SpringArm,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANewVehiclePawn_Statics::NewProp_Camera,
+	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ANewVehiclePawn_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ANewVehiclePawn>::IsAbstract,
 	};
@@ -55,11 +91,11 @@ void EmptyLinkFunctionForGeneratedCodeNewVehiclePawn() {}
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
 		nullptr,
-		nullptr,
+		Z_Construct_UClass_ANewVehiclePawn_Statics::PropPointers,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
 		0,
-		0,
+		UE_ARRAY_COUNT(Z_Construct_UClass_ANewVehiclePawn_Statics::PropPointers),
 		0,
 		0x009000A4u,
 		METADATA_PARAMS(Z_Construct_UClass_ANewVehiclePawn_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_ANewVehiclePawn_Statics::Class_MetaDataParams))
@@ -73,7 +109,7 @@ void EmptyLinkFunctionForGeneratedCodeNewVehiclePawn() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ANewVehiclePawn, 3932433855);
+	IMPLEMENT_CLASS(ANewVehiclePawn, 1950990557);
 	template<> VEHICLE_API UClass* StaticClass<ANewVehiclePawn>()
 	{
 		return ANewVehiclePawn::StaticClass();

@@ -58,7 +58,11 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ANewVehiclePawn)
 
 
-#define Vehicle_Source_Vehicle_NewVehiclePawn_h_15_PRIVATE_PROPERTY_OFFSET
+#define Vehicle_Source_Vehicle_NewVehiclePawn_h_15_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__SpringArm() { return STRUCT_OFFSET(ANewVehiclePawn, SpringArm); } \
+	FORCEINLINE static uint32 __PPO__Camera() { return STRUCT_OFFSET(ANewVehiclePawn, Camera); }
+
+
 #define Vehicle_Source_Vehicle_NewVehiclePawn_h_12_PROLOG
 #define Vehicle_Source_Vehicle_NewVehiclePawn_h_15_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \

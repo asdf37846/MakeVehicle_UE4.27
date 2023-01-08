@@ -51,7 +51,7 @@ ANewVehiclePawn::ANewVehiclePawn()
 	// 카메라 설정
 	Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("ChaseCamera"));
 	Camera->SetupAttachment(SpringArm, USpringArmComponent::SocketName);
-	Camera->FieldOfView = 90.0f;
+	Camera->FieldOfView = 90.f;
 
 }
 
@@ -73,5 +73,46 @@ void ANewVehiclePawn::SetupPlayerInputComponent(UInputComponent* PlayerInputComp
 
 	PlayerInputComponent->BindAction("Handbrake", IE_Pressed, this, &ANewVehiclePawn::OnHandbrakePressed);
 	PlayerInputComponent->BindAction("Handbrake", IE_Pressed, this, &ANewVehiclePawn::OnHandbrakeReleased);
+
+}
+
+void ANewVehiclePawn::ApplyThrottle(float Val)
+{
+	GetVehicleMovementComponent()->SetThrottleInput(Val);
+}
+
+void ANewVehiclePawn::ApplySteering(float Val)
+{
+	GetVehicleMovementComponent()->SetSteeringInput(Val);
+}
+
+void ANewVehiclePawn::LookUp(float Val)
+{
+	if (Val != 0.f)
+	{
+		AddControllerPitchInput(Val);
+	}
+}
+
+void ANewVehiclePawn::Turn(float Val)
+{
+	if (Val != 0.f)
+	{
+		AddControllerYawInput(Val);
+	}
+}
+
+void ANewVehiclePawn::OnHandbrakePressed()
+{
+	GetVehicleMovementComponent()->SetHandbrakeInput(true);
+}
+
+void ANewVehiclePawn::OnHandbrakeReleased()
+{
+	GetVehicleMovementComponent()->SetHandbrakeInput(false);
+}
+
+void ANewVehiclePawn::UpdateInAirControl(float DeltaTime)
+{
 
 }
