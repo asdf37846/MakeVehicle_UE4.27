@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "Vehicle",
+			"Path": "C:\\Unreal\\MyProject\\MakeVehicle_UE4.27\\Vehicle\\Source\\Vehicle.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "VehicleEditor",
+			"Path": "C:\\Unreal\\MyProject\\MakeVehicle_UE4.27\\Vehicle\\Source\\VehicleEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

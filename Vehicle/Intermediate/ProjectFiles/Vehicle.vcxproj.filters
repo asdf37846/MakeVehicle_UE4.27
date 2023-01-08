@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\Vehicle.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{B1C67B32-D900-4BB0-8147-862F7CB13152}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\Vehicle.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\VehicleEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{2774E8C1-F13E-4287-84EC-E80DCA7F2AF5}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\Vehicle">
+      <UniqueIdentifier>{DE594CDB-9A98-40F6-BFE1-022496577DA8}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\Vehicle\Vehicle.Build.cs">
+      <Filter>Source\Vehicle</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\Vehicle\Vehicle.cpp">
+      <Filter>Source\Vehicle</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Vehicle\Vehicle.h">
+      <Filter>Source\Vehicle</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Vehicle\VehicleGameModeBase.cpp">
+      <Filter>Source\Vehicle</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Vehicle\VehicleGameModeBase.h">
+      <Filter>Source\Vehicle</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
