@@ -32,8 +32,9 @@
 /wd4244
 /wd4838
 /I .
-/I C:\Unreal\MyProject\MakeVehicle_UE4.27\Vehicle\Intermediate\Build\Win64\UE4Editor\Inc\Vehicle
-/I C:\Unreal\MyProject\MakeVehicle_UE4.27\Vehicle\Source
+/I ..\Plugins\Runtime\PhysXVehicles\Intermediate\Build\Win64\UE4Editor\Inc\PhysXVehicles
+/I ..\Plugins\Runtime\PhysXVehicles\Source
+/I ..\Plugins\Runtime\PhysXVehicles\Source\PhysXVehicles\Public
 /I Runtime
 /I Runtime\TraceLog\Public
 /I Runtime\Core\Public
@@ -233,6 +234,11 @@
 /I Editor\Kismet\Public
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\ClothingSystemRuntimeInterface
 /I Runtime\ClothingSystemRuntimeInterface\Public
+/I ..\Intermediate\Build\Win64\UE4Editor\Inc\AnimGraphRuntime
+/I Runtime\AnimGraphRuntime\Public
+/I ..\Plugins\Runtime\PhysXVehicles\Source\ThirdParty
+/I C:\Unreal\MyProject\MakeVehicle_UE4.27\Vehicle\Intermediate\Build\Win64\UE4Editor\Inc\Vehicle
+/I C:\Unreal\MyProject\MakeVehicle_UE4.27\Vehicle\Source
 /I ThirdParty\PhysX3\PxShared\include
 /I ThirdParty\PhysX3\PxShared\include\cudamanager
 /I ThirdParty\PhysX3\PxShared\include\filebuf

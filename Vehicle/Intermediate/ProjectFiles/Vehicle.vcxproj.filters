@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Vehicle.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{B1C67B32-D900-4BB0-8147-862F7CB13152}</UniqueIdentifier>
+      <UniqueIdentifier>{169A236E-4179-4D81-A98A-B7D0B5E0AB9B}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Vehicle.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{2774E8C1-F13E-4287-84EC-E80DCA7F2AF5}</UniqueIdentifier>
+      <UniqueIdentifier>{73BB09B1-7EB0-4DAF-8F2E-7435067E7C7D}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -24,8 +24,14 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Vehicle">
-      <UniqueIdentifier>{DE594CDB-9A98-40F6-BFE1-022496577DA8}</UniqueIdentifier>
+      <UniqueIdentifier>{9D741C88-8B7F-4984-96A7-9EF28FAC4A6E}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\Vehicle\NewVehiclePawn.cpp">
+      <Filter>Source\Vehicle</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Vehicle\NewVehiclePawn.h">
+      <Filter>Source\Vehicle</Filter>
+    </ClInclude>
     <None Include="..\..\Source\Vehicle\Vehicle.Build.cs">
       <Filter>Source\Vehicle</Filter>
     </None>
