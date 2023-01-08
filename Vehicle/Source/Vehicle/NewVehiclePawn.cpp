@@ -45,4 +45,9 @@ ANewVehiclePawn::ANewVehiclePawn()
 	SpringArm->TargetArmLength = 250.0f;
 	SpringArm->bUsePawnControlRotation = true;
 
+	// 카메라 설정
+	Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("ChaseCamera"));
+	Camera->SetupAttachment(SpringArm, USpringArmComponent::SocketName);
+	Camera->FieldOfView = 90.0f;
+
 }
