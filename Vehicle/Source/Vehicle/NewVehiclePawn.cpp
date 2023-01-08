@@ -51,3 +51,15 @@ ANewVehiclePawn::ANewVehiclePawn()
 	Camera->FieldOfView = 90.0f;
 
 }
+
+void ANewVehiclePawn::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
+
+	UpdateInAirControl(DeltaTime);
+}
+
+void ANewVehiclePawn::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
+{
+	Super::SetupPlayerInputComponent(PlayerInputComponent);
+}
