@@ -8,6 +8,9 @@
 #include "Components/InputComponent.h"
 #include "WheeledVehicleMovementComponent4W.h"
 
+static const FName NAME_SteerInput("Steer");
+static const FName NAME_ThrottleInput("Throttle");
+
 ANewVehiclePawn::ANewVehiclePawn()
 {
 	UWheeledVehicleMovementComponent4W* Vehicle4W = CastChecked<UWheeledVehicleMovementComponent4W>(GetVehicleMovement());
@@ -62,4 +65,13 @@ void ANewVehiclePawn::Tick(float DeltaTime)
 void ANewVehiclePawn::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
+
+	PlayerInputComponent->BindAxis(NAME_ThrottleInput, this, &ANewVehiclePawn::ApplyThrottle);
+	PlayerInputComponent->BindAxis(NAME_SteerInput, this, &ANewVehiclePawn::ApplySteering);
+	PlayerInputComponent->BindAxis("LookUp", this, &ANewVehiclePawn::LookUp);
+	PlayerInputComponent->BindAxis("Turn", this, &ANewVehiclePawn::Turn);
+
+	PlayerInputComponent->BindAction("Handbrake", IE_Pressed, this, &ANewVehiclePawn::OnHandbrakePressed);
+	PlayerInputComponent->BindAction("Handbrake", IE_Pressed, this, &ANewVehiclePawn::OnHandbrakeReleased);
+
 }
