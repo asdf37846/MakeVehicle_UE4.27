@@ -39,4 +39,10 @@ ANewVehiclePawn::ANewVehiclePawn()
 	Vehicle4W->TransmissionSetup.GearSwitchTime = 0.1f;
 	Vehicle4W->TransmissionSetup.GearAutoBoxLatency = 1.0f;
 
+	// 스프링 암 설정
+	SpringArm = CreateDefaultSubobject<USpringArmComponent>(TEXT("SpringArm"));
+	SpringArm->SetupAttachment(RootComponent);
+	SpringArm->TargetArmLength = 250.0f;
+	SpringArm->bUsePawnControlRotation = true;
+
 }
