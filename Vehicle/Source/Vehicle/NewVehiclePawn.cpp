@@ -18,15 +18,17 @@ ANewVehiclePawn::ANewVehiclePawn()
 	// 타이어 최대 부하
 	Vehicle4W->MinNormalizedTireLoad = 0.0f;
 	Vehicle4W->MinNormalizedTireLoadFiltered = 0.2f;
-	Vehicle4W->MaxNormalizedTireLoad = 2.0f;
-	Vehicle4W->MaxNormalizedTireLoadFiltered = 2.0f;
+	Vehicle4W->MaxNormalizedTireLoad = 100.0f;
+	Vehicle4W->MaxNormalizedTireLoadFiltered = 100.0f;
 
 	// 토크 설정
-	Vehicle4W->MaxEngineRPM = 5700.0f;
+	Vehicle4W->MaxEngineRPM = 15000.0f;
 	Vehicle4W->EngineSetup.TorqueCurve.GetRichCurve()->Reset();
-	Vehicle4W->EngineSetup.TorqueCurve.GetRichCurve()->AddKey(0.0f, 400.0f);
-	Vehicle4W->EngineSetup.TorqueCurve.GetRichCurve()->AddKey(1890.0f, 500.0f);
-	Vehicle4W->EngineSetup.TorqueCurve.GetRichCurve()->AddKey(5730.0f, 400.0f);
+	Vehicle4W->EngineSetup.TorqueCurve.GetRichCurve()->AddKey(0.0f, 700.0f);
+	Vehicle4W->EngineSetup.TorqueCurve.GetRichCurve()->AddKey(5000.0f, 1000.0f);
+	Vehicle4W->EngineSetup.TorqueCurve.GetRichCurve()->AddKey(10000.0f, 1200.0f);
+	Vehicle4W->EngineSetup.TorqueCurve.GetRichCurve()->AddKey(13000.0f, 1350.0f);
+	Vehicle4W->EngineSetup.TorqueCurve.GetRichCurve()->AddKey(15000.0f, 1500.0f);
 
 	// 스티어링 조정
 	Vehicle4W->SteeringCurve.GetRichCurve()->Reset();
